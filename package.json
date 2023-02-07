@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mysql2": "^3.1.1",
+    "nodemon": "^2.0.20",
+    "sequelize": "^6.28.0"
+  },
+  "name": "expense-tracker",
+  "description": "��#\u0000 \u0000e\u0000x\u0000p\u0000e\u0000n\u0000s\u0000e\u0000-\u0000a\u0000p\u0000p\u0000-\u0000e\u0000x\u0000p\u0000r\u0000e\u0000s\u0000s\u0000\r\u0000 \u0000",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishekk-web/expense-app-express.git"
+  },
+  "author": "Abhishek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhishekk-web/expense-app-express/issues"
+  },
+  "homepage": "https://github.com/abhishekk-web/expense-app-express#readme"
+}
