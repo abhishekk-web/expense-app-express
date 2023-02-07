@@ -6,8 +6,8 @@ exports.postExpense =  async (req, res) => {
 
     const {expense, description, category}= req.body;
     console.log(expense);
-    Expense.create({expense:expense, description:description, category:category})
-    res.status(200).json({success: true, message: "Data updated", data:req.body});
+    const data = await Expense.create({expense:expense, description:description, category:category})
+    res.status(200).json({success: true, message: "Data updated", data:data});
     // console.log(expense);
 
     }
@@ -39,24 +39,16 @@ exports.deleteExpense = async (req, res) => {
         const expenseId = req.params.id;
         console.log(expenseId);
 
-        Expense.destroy({where:{id: expenseId}})
+        await Expense.destroy({where:{id: expenseId}})
         return res.status(200).json({success: true, message: "deleted successfully"});
 
-        // Expense.findAll({where: {id:expenseId}})
-        // .then(expense => {
-
-        //     return expense.destroy()
-
-        // })
-        // .then(()=> {
-        //     return res.status(200).json({success: true, message: "deleted successfully"});
-        // })
+        
         
 
     }
     catch(err) {
 
-        console.log(err);
+        res.status(400).json({success: false, message: "not deleted"});
 
     }
 
